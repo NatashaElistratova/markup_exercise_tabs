@@ -96,20 +96,30 @@
   a[data-tab="html"]:focus ~ .tabs-content [data-tab-content="html"] {
     display: block;
   }
-  /* a[data-tab="html"]:focus ~ .tabs-content [data-tab-content="html"] {
-    display: block;
-  } */
-  a[data-tab="css"]:hover ~ .tabs-content [data-tab-content="css"] {
-    display: block;
-  }
+  
+  a[data-tab="css"]:hover ~ .tabs-content [data-tab-content="css"],
   a[data-tab="css"]:focus ~ .tabs-content [data-tab-content="css"] {
     display: block;
   }
-  a[data-tab="js"]:hover ~ .tabs-content [data-tab-content="js"] {
-    display: block;
-  }
+ 
+  a[data-tab="js"]:hover ~ .tabs-content [data-tab-content="js"],
   a[data-tab="js"]:focus ~ .tabs-content [data-tab-content="js"] {
     display: block;
+  }
+
+  a[data-tab="html"]:hover ~ .tabs-content [data-tab-content="css"],
+  a[data-tab="html"]:hover ~ .tabs-content [data-tab-content="js"] {
+    display: none;
+  }
+  
+  a[data-tab="css"]:hover ~ .tabs-content [data-tab-content="html"],
+  a[data-tab="css"]:hover ~ .tabs-content [data-tab-content="js"] {
+    display: none;
+  }
+  
+  a[data-tab="js"]:hover ~ .tabs-content [data-tab-content="html"],
+  a[data-tab="js"]:hover ~ .tabs-content [data-tab-content="css"] {
+    display: none;
   }
   
   /* END */
